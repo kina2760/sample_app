@@ -34,4 +34,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/db/test.sqlite3-0
+
