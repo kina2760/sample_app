@@ -13,4 +13,7 @@ class ActiveSupport::TestCase
 
   # （すべてのテストで使うその他のヘルパーメソッドは省略）
   include ApplicationHelper
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end
