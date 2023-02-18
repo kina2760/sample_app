@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
   include SessionsHelper
 
    private
@@ -10,6 +11,10 @@ class ApplicationController < ActionController::Base
         flash[:danger] = "Please log in."
         redirect_to login_url, status: :see_other
       end
+    end
+
+    def microposts_search_params
+      params.require(:q).permit(:content_cont)
     end
 
 end

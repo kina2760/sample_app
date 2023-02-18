@@ -117,5 +117,9 @@ class User < ApplicationRecord
       self.activation_digest = User.digest(activation_token)
     end
 
+    def self.ransackable_attributes(auth_object = nil)
+      ["activated", "activated_at", "activation_digest", "admin", "created_at", "email", "id", "name", "password_digest", "remember_digest", "reset_digest", "reset_sent_at", "updated_at"]
+    end
+
 end
 
