@@ -22,9 +22,11 @@ test:
 
 production:
   <<: *default
+  database: sample_app_production
   adapter: postgresql
   encoding: unicode
   url: <%= ENV['DATABASE_URL'] %>
   username: postgres
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 
 
