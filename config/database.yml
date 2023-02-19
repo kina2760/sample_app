@@ -25,7 +25,7 @@ production:
   adapter: postgresql
   encoding: unicode
   username: postgres
-  database: sample_app_production
+  # database: sample_app_production
   # password: <%= ENV['DATABASE_PASSWORD'] %>
   # url: <%= ENV['DATABASE_URL'] %>
 
