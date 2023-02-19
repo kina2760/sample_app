@@ -64,7 +64,7 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'sample-app-4tz7.onrender.com'
+  host = 'ec2-54-248-96-222.ap-northeast-1.compute.amazonaws.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :port           => 587,
