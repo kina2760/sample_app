@@ -67,3 +67,10 @@ require "test_helper"
       assert_select 'a', text: 'delete', count: 0
     end
   end
+
+  # class UsersSearchTest < UsersIndex
+
+  #   test "search for usersAll with empty input" do
+
+  #   end
+  # end

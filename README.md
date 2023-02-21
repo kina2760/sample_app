@@ -1,44 +1,25 @@
-# Ruby on Rails チュートリアルのサンプルアプリケーション
+#sample_app
 
-これは、次の教材で作られたサンプルアプリケーションです。
-[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-（第7版）
-[Michael Hartl](https://www.michaelhartl.com/) 著
+http://ec2-54-248-96-222.ap-northeast-1.compute.amazonaws.com/
 
-## ライセンス
+#Twitter風SNS
+主な機能
+CRUD、パスワードリセット、画像投稿、いいね、フォロー、非同期画面遷移、メール認証、ページネーション、セキュリティ、投稿検索、ユーザー検索
 
-[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
-ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
-詳細は [LICENSE.md](LICENSE.md) をご覧ください。
+#開発言語
+Ruby(3.1.2),Ruby on Rails(7.0.4),HTML,CSS(bootstrap),Javascript.git
 
-## 使い方
+#ローカル開発環境
+cloud9(AWS クラウドIDE)
+データベース　sqlite3
+Web,アプリケーションサーバー　puma
 
-このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
-その後、次のコマンドで必要になる RubyGems をインストールします。
+#本番環境
+サーバー　Render→AWS (EC2)OS AmazonLinux2
+データベース　PostgreSQL14?(Render)→Postgresql13
+Webサーバー　nginx
+アプリケーションサーバー　unicorn 3.6.2
+javascript実行環境　Node.jp,yarn
+ストレージ　S3(AWS)
+メール送信　Mailgun
 
-```
-$ gem install bundler -v 2.3.14
-$ bundle _2.3.14_ config set --local without 'production'
-$ bundle _2.3.14_ install
-```
-
-その後、データベースへのマイグレーションを実行します。
-
-```
-$ rails db:migrate
-```
-
-最後に、テストを実行してうまく動いているかどうか確認してください。
-
-```
-$ rails test
-```
-
-テストが無事にパスしたら、Railsサーバーを立ち上げる準備が整っているはずです。
-
-```
-$ rails server
-```
-
-詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-を参考にしてください。
